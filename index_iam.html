@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cielo Estrellado</title>
+  <style>
+    /* --- ESTILOS GENERALES --- */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(ellipse at bottom, #0b0c10 0%, #000 100%);
+      color: #e0e7ff;
+      overflow-x: hidden;
+    }
+
+    /* --- MENU --- */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10, 10, 15, 0.9);
+      border-bottom: 1px solid #9ecfff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      z-index: 10;
+      backdrop-filter: blur(6px);
+    }
+
+    header h1 {
+      color: #9ecfff;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px #2dd4bf;
+    }
+
+    nav a {
+      color: #9ecfff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #9ecfff;
+      text-shadow: 0 0 6px #2dd4bf;
+    }
+
+    /* --- SECCIÓN HERO --- */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stars {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: transparent;
+      box-shadow:
+        100px 200px #fff,
+        400px 100px #fff,
+        600px 300px #fff,
+        900px 150px #fff,
+        1200px 250px #fff,
+        300px 400px #fff,
+        800px 500px #fff,
+        1100px 50px #fff,
+        1400px 350px #fff,
+        1600px 200px #fff;
+      animation: blink 2s infinite alternate;
+    }
+
+    @keyframes blink {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      color: #9ecfff;
+      text-shadow: 0 0 20px #2dd4bf;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 1.1rem;
+      color: #b3c0d1;
+    }
+
+    /* --- SECCIONES --- */
+    section {
+      padding: 100px 10%;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    h3 {
+      font-size: 2rem;
+      color: #9ecfff;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #2dd4bf;
+    }
+
+    .about, .missions, .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .about p, .missions p, .contact p {
+      color: #bcd0e4;
+      line-height: 1.6;
+      max-width: 800px;
+    }
+
+    /* --- SECCIÓN MISIONES --- */
+    .missions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .mission-card {
+      border: 1px solid #9ecfff;
+      padding: 20px;
+      border-radius: 10px;
+      background: rgba(10, 10, 20, 0.6);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .mission-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #2dd4bf80;
+    }
+
+    .mission-card h4 {
+      color: #8aa2c1;
+      margin-bottom: 10px;
+    }
+
+    /* --- SECCIÓN CONTACTO --- */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #8aa2c1;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Cielo Estrellado</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#misiones">Misiones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="stars"></div>
+    <h2>Entre las Estrellas</h2>
+    <p>Explorando los confines del universo con la tecnología del mañana… desde 1985.</p>
+  </section>
+
+  <section class="about" id="sobre">
+    <h3>Sobre la Agencia</h3>
+    <p>El Cosmic Command Center es una instalación dedicada a la exploración interestelar retro-futurista. Inspirada en la era dorada de los 80s, combina tecnología analógica, pantallas CRT y neones turquesa para monitorear misiones en tiempo real desde el espacio profundo.</p>
+    <p>Nuestros ingenieros y astronautas trabajan día y noche para descifrar los misterios del cosmos, impulsados por un solo objetivo: llegar más lejos, con estilo.</p>
+  </section>
+
+  <section class="missions" id="misiones">
+    <h3>Misiones Destacadas</h3>
+    <p>Estas son algunas de las operaciones más memorables en nuestra historia galáctica.</p>
+
+    <div class="missions-grid">
+      <div class="mission-card">
+        <h4>Proyecto Orion</h4>
+        <p>Primera misión en cruzar el cinturón de asteroides utilizando motores iónicos retroalimentados por neón.</p>
+      </div>
+      <div class="mission-card">
+        <h4>Luna 85</h4>
+        <p>Exploración lunar de 1985, pionera en comunicación satelital en color RGB.</p>
+      </div>
+      <div class="mission-card">
+        <h4>Neon Voyager</h4>
+        <p>Nave diseñada para transmitir señales de radio con visualización espectral psicodélica.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <h3>Contacto</h3>
+    <p>¿Listo para unirte a la próxima misión? Envíanos una transmisión interestelar.</p>
+    <div class="contact-info">
+      <p>📡 Canal de frecuencia: <b>88.5 MHz</b></p>
+      <p>📍 Base central: Sector Lunar 7, Hangar Retro 04</p>
+      <p>✉️ Email: <a href="mailto:mission@nasa-retro.space" style="color:#9ecfff;">mission@nasa-retro.space</a></p>
+    </div>
+  </section>
+
+  <footer>
+    © 1985–2025 Cosmic Command Center. All systems nominal. 🚀
+  </footer>
+
+</body>
+</html>
